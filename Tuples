@@ -1,0 +1,16 @@
+1. Создайте кортеж с тремя параметрами: ваш любимый фильм, ваше любимое число и ваше любимое блюдо. Все элементы кортежа должны быть именованы.
+2. Одним выражением запишите каждый элемент кортежа в три константы.
+3. Создайте второй кортеж, аналогичный первому по параметрам, но описывающий другого человека (с другими значениями).
+4. Обменяйте значения в кортежах между собой (с использованием дополнительного промежуточного кортежа)
+5. Создайте новый кортеж, элементами которого будут любимое число из первого кортежа, любимое число из второго кортежа и разница любимых чисел первого и второго кортежей.
+
+MySwiftCode:
+
+var MyFavourite: (FavFilm: String, FavNumber: Int, FavDish: String) = ("Up", 7 ,"Pasta by Navy")
+let (film, number, dish) = MyFavourite
+var MyGirlfriendsFav: (FavFilm: String, FavNumber: Int, FavDish: String) = ("Friends", 4 , "Lasagne")
+var IntermTuple = MyFavourite
+let MyFavourite = MyGirlfriendsFav
+let MyGirlfriendsFav = IntermTuple
+let MixFavourite = (7, 4, MyFavourite.1 - MyGirlfriendsFav.1)
+
