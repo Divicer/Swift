@@ -1,0 +1,12 @@
+Вернемся к заданию из главы 9 (cм.collections), в котором вы описывали шахматную фигуру и создавали конструкцию if-else , проверяющую наличие фигуры на игровом поле.
+Вам необходимо доработать данную программу таким образом, чтобы она автоматически анализировала не одну переданную ей фигуру, а все фигуры, хранящиеся в переменной Chessmans .
+###
+typealias Chessman = [String:(alpha:Character, num:Int)?]
+var Chessmans:Chessman = ["WhiteKing": ("f", 2),"BlackKing": ("f",7)],"BlackQueen": nil]
+for(figure,position) in Chessmans{
+if position == nil{
+  print("The figure is dead!')
+}else{
+  print("The coordinates of the shape is \(figure)") // выбранная фигура белый король
+  }
+  
