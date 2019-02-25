@@ -1,0 +1,30 @@
+Представьте, что вы являетесь преподавателем курсов по шахматам. Ваши занятия посещают три ученика.
+Создайте словарь, который будет содержать информацию о ваших студентах и об их успехах. Ключом словаря должна быть фамилия, а значением — другой словарь, содержащий дату занятия и полученную на этом занятии оценку.
+Тип данных словаря должен быть [String:[String:UInt]].
+В вашем электронном журнале должно находиться по две оценки для каждого из трех учеников. Фамилии, даты занятий и оценки придумайте сами.
+Посчитайте средний балл каждого студента и средний балл всей группы целиком и выведите всю полученную информацию на консоль.
+###
+mySwiftCode:
+
+typealias ElJourn = [String:[String:UInt]
+var pupils: ElJourn = ["Ivanov":["04.01.19":4,"05.01.19":5,"06.01.19":4],"Petrov":["07.01.19":5,"08.01.19":5,"11.01.19":5],"Sidorov":["12.01.19":4,"13.01.19":5,"14.01.19":5]]
+var:UInt sumIvanov=0
+for (_,marks) in pupils["Ivanov"]!{
+	sumIvanov += marks
+}
+let AverResIv = sumIvanov/3
+var:UInt sumPetrov=0
+for (_,marks) in pupils["Petrov"]!{
+	sumPetrov += marks
+}
+let AverResPet = sumPetrov/3
+var:UInt = sumSidorov=0
+for (_,marks) in pupils["Sidorov"]!{
+	sumSidorov += marks
+}
+let AverResSid= sumSidorov/3
+let TotalResult = AverResSid + AverResIv + AverResPet
+print("Ivanov's GPA makes \(AverResIv)")
+print("Petrov's GPA makes \(AverResPet)")
+print("Sidorov's GPA makes \(AverResSid)")
+print("The total averages score of all students is \(TotalResult)")
